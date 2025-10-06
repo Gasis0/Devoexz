@@ -31,26 +31,26 @@ ____
 
 ## Мой не сам
 ____
-- [ ] Задание ссылка на документ -[[https://docs.google.com/spreadsheets/d/1jtph62-L9C9z5G7vF_RBeht7doyOjcDWygnOneDu19Y/edit?usp=sharing]
-    - [ ] Выделены таблицы - [https://docs.google.com/spreadsheets/d/1jtph62-L9C9z5G7vF_RBeht7doyOjcDWygnOneDu19Y/edit?usp=sharing]
-    - [ ] Выделены данные в таблицах
-- [ ] База данных ссылка на таблицу и скрипт [https://drive.google.com/file/d/1gNwXb2UOvJmvZ0jYUyvU7q5GqK9TIWdB/view?usp=drive_link]
-    - [ ] Лист гугл таблицы на котором все данные
-    - [ ] Скрин ER диаграммы на этом же листе
-    - [ ] Листы с данными для импорта
-    - [ ] Файл скрипта .sql
-- [ ] Код должен быть в папке
-    - [ ] Иконка, логотип и название
-    - [ ] Навигационная панель и ссылки работают
-    - [ ] Есть стили
+- [✓] Задание ссылка на документ -[[https://docs.google.com/spreadsheets/d/1jtph62-L9C9z5G7vF_RBeht7doyOjcDWygnOneDu19Y/edit?usp=sharing]
+    - [✓] Выделены таблицы - [https://docs.google.com/spreadsheets/d/1jtph62-L9C9z5G7vF_RBeht7doyOjcDWygnOneDu19Y/edit?usp=sharing]
+    - [✓] Выделены данные в таблицах
+- [✓] База данных ссылка на таблицу и скрипт [https://drive.google.com/file/d/1gNwXb2UOvJmvZ0jYUyvU7q5GqK9TIWdB/view?usp=drive_link]
+    - [✓] Лист гугл таблицы на котором все данные
+    - [✓] Скрин ER диаграммы на этом же листе
+    - [✓] Листы с данными для импорта
+    - [✓] Файл скрипта .sql
+- [✓] Код должен быть в папке
+    - [✓] Иконка, логотип и название
+    - [✓] Навигационная панель и ссылки работают
+    - [✓] Есть стили
 
     
 ## Нарушениям нет
 ____
-- [ ] Задание ссылка на документ [https://docs.google.com/document/d/1AUsVw2OYa4LShANz-Vt2P1MOFIr0CtHPSEMdlzeq7k4/edit?usp=sharing]
-    - [ ] Выделены таблицы
-    - [ ] Выделены данные в таблицах
-- [ ] База данных ссылка на таблицу и скрипт [https://docs.google.com/spreadsheets/d/1lBm2hIYS004tsiTPsRFi-g1lwc7Ebr4KIqdHcho-N78/edit?usp=sharing]
+- [✓] Задание ссылка на документ [https://docs.google.com/document/d/1AUsVw2OYa4LShANz-Vt2P1MOFIr0CtHPSEMdlzeq7k4/edit?usp=sharing]
+    - [✓] Выделены таблицы
+    - [✓] Выделены данные в таблицах
+- [✓] База данных ссылка на таблицу и скрипт [https://docs.google.com/spreadsheets/d/1lBm2hIYS004tsiTPsRFi-g1lwc7Ebr4KIqdHcho-N78/edit?usp=sharing]
     - [ ] Лист гугл таблицы на котором все данные
     - [ ] Скрин ER диаграммы на этом же листе
     - [ ] Листы с данными для импорта
