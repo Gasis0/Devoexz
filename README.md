@@ -81,8 +81,6 @@ ____
           <br><img height="200" alt="Структура приложения" src="" />
     - [✓] Варианты использования Use Case
           <br><img height="300" alt="Use Case" src="https://drive.google.com/file/d/1nErGKV-CbDEWJwPYIGpC-27A4E6r_3dm/view?usp=drive_link](https://drive.google.com/file/d/1nErGKV-CbDEWJwPYIGpC-27A4E6r_3dm/view?usp=sharing" />
-    - [ ] Деятельности Activity
-          <br><img height="400" alt="Activity" src="" />
 - [ ] База данных ссылка на таблицу и скрипт ИЛИ описание ИИ
     - [ ] Лист гугл таблицы на котором все данные
     - [ ] Скрин ER диаграммы на этом же листе
