@@ -17,10 +17,22 @@
         <a href="/Devoexz/Narusheniam_net">Главная</a>
         <a href="/Devoexz/Narusheniam_net/admin">Админ-панель</a>
 </nav>
-<main>
-<footer>2025</footer>
-</main>
-<script src="script.js"></script>
 
+<main>
+    <h1>Авторизация<h1>
+        <label>Логин
+            <input type="text" name="login">
+        </label>
+    <label>Пароль
+            <input type="text" name="password">
+        </label>
+        <button>Вход</button>
+        <p class="error"></p> 
+        <footer>
+            <h3>2025</h3>
+        </footer>
+    </main>
+
+    <script src="script/script.js"></script>
 </body>
 </html>
