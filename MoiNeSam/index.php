@@ -1,26 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мой не сам</title>
-    <link rel="icon" href="images/logo.jpeg"> 
-    <link rel="stylesheet" href="style/style.css"> 
-</head>
+<?php
+$pageTittle = 'Авторизация';
+require_once "struc.php";
+?>
 <body>
-    <header>
-    <img src="images/logo.jpeg" alt="логотип">
-    <h1>Мой не сам</h1> 
-</header>
-
-<nav>
-        <a href="/Devoexz/MoiNeSam">Главная</a>
-        <a href="/Devoexz/MoiNeSam/admin">Админ-панель</a>
-</nav>
-<main>
-<footer>2025</footer>
-</main>
-<script src="script"></script>
-
-</body>
-</html>
+    <main>    
+        <form>
+        <label>Логин
+            <input type="text" name="login"> 
+        </label> 
+        <label>Пароль
+            <input type="text" name="password"> 
+        </label> 
+        <button>Вход</button>
+        </form> 
+        <p class="error">
+            <?php            
+            $password=strip_tags($_GET["password"] ?? "");
+            $login=strip_tags($_GET["login"] ?? "");            
+            if ($login && $password){                
+                echo find($login,$password);
+                if (find($login, $password)) {
+                    echo "Успешная авторизация: " . $login . ", " . $password;
+                } else {
+                    echo "Ошибка авторизации: " . $login . ", " . $password . " - error";
+                }
+            }
+            ?>
+        </p>
+    </main>
