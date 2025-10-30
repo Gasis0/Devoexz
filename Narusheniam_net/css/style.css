@@ -1,6 +1,7 @@
 * {
-    font-family: 'Segoe UT', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
 header {
     display: flex;
     align-items: center;
@@ -8,29 +9,32 @@ header {
 }
 
 img {
-    width: 300px;
-    height: auto;
+    height: 300px;
+    
 }
-
 nav {
+    margin-top: 20px;
+    gap: 20px;
     display: flex;
     align-items: center;
     justify-content: center; 
-    gap: 20px;
 }
+
 main {
     display: flex;
     align-items: center;
-    flex: 1;
     flex-direction: column;
-}
-footer {
-    display: flex;
-    align-items: center;
-    position: fixed;
-    bottom: 0px;
+    flex: 1;
 
 }
-.error {
-        color: red;
-    }
+
+footer {
+    display: flex;
+    align-items: center; 
+    position: fixed;
+    bottom: 0;
+}
+
+.Error {
+    color: red;
+}

@@ -11,7 +11,7 @@ require_once "db/db.php";
     <link rel='icon' href='images/logo.jpeg'>
     <link rel='stylesheet' href='style/style.css'>
 </head>
-
+<body>
 <header> <img src='images/logo.jpeg' alt='логотип'>
         <h1>Мой не сам</h1>
     </header>
@@ -22,18 +22,19 @@ require_once "db/db.php";
         <a href="/Devoexz/MoiNeSam/order.php">Список-заявок</a>
         <a href="/Devoexz/MoiNeSam/order-list.php">Создание заявки</a>
     </nav>
-<body>
+
     <main>
     <h1>  
     <?php echo $pageTittle;?>
-    <h1>
+</h1>
         <div class= 'content'>
             <?php echo $pageContent ?? '';?>
         </div>   
         <footer>
     <h3>2025</h3>
-        <footer>
+</footer>
     </main>
+    
 <script src="script/script.js"></script>
 </body>
 </html>

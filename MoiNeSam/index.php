@@ -2,7 +2,6 @@
 $pageTittle = 'Авторизация';
 require_once "struc.php";
 ?>
-<body>
     <main>    
         <form>
         <label>Логин
@@ -18,7 +17,7 @@ require_once "struc.php";
             $password=strip_tags($_GET["password"] ?? "");
             $login=strip_tags($_GET["login"] ?? "");            
             if ($login && $password){                
-                echo find($login,$password);
+                //echo find($login,$password);
                 if (find($login, $password)) {
                     echo "Успешная авторизация: " . $login . ", " . $password;
                 } else {
