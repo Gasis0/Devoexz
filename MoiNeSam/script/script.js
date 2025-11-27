@@ -1,15 +1,14 @@
-const login = document.getElementsByName("login")[0];
-const password = document.getElementsByName("password")[0];
-const error = document.querySelector(".error");
-console.log(document.querySelector("button"));
-document.querySelector("button").addEventListener("click", (event) => {
-    event.preventDefault();
-    const loginValue = login.value.trim();
-    const passwordValue = password.value.trim();
+document.addEventListener('DOMContentLoaded', function() {
+    const buttons = document.querySelectorAll('button');
+    buttons.forEach(button => {
+      button.addEventListener('mouseover', function() {
+        this.style.backgroundColor = 'red';
+      });
+      button.addEventListener('mouseout', function() {
+        this.style.backgroundColor = '';
+      });
+    });
+  });
 
-    if (loginValue === "" || passwordValue === "") {
-        error.textContent = "Заполните поля";
-    } else {
-        error.textContent = "";
-    }
-});
+
+

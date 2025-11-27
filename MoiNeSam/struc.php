@@ -1,40 +1,69 @@
-
 <?php
-require_once "db/db.php";
+require_once "db/db.php"; 
+$navLinks = [];
+$showAuthLinks = true;
+
+// Check if user is logged in via session
+if (isset($_SESSION['user'])) {
+    $showAuthLinks = false; // Hide auth links if user is logged in
+    $user = $_SESSION['user']; // User data is already in the session
+
+    // Check user type from the session data
+    $userTypeId = $user['user_type_id'] ?? null;
+    
+    if ($userTypeId == 1) { // Administrator
+        // Admin specific links
+        $navLinks = [
+            ['href' => 'admin.php', 'text' => 'Панель администратора'],
+        ];
+    } else { // Regular User
+        $navLinks = [
+            ['href' => 'order.php', 'text' => 'Список заявок'],
+            ['href' => 'order-list.php', 'text' => 'Создать заявку'],
+        ];
+    }
+    // Add logout button for all logged-in users
+    $navLinks[] = ['href' => 'logout.php', 'text' => 'Выход'];
+} else {
+    // Links visible before authentication
+    $navLinks = [
+        ['href' => 'index.php', 'text' => 'Авторизация'],
+        ['href' => 'reg.php', 'text' => 'Регистрация'],
+    ];
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мой не сам <?php echo $pageTittle ?></title>
+    <title>Мой не сам  <?php echo $pageTitle; ?></title>
     <link rel='icon' href='images/logo.jpeg'>
     <link rel='stylesheet' href='style/style.css'>
 </head>
 <body>
-<header> <img src='images/logo.jpeg' alt='логотип'>
+    <header>
+        <img src='images/logo.jpeg' alt='логотип'>
         <h1>Мой не сам</h1>
     </header>
+
     <nav>
-        <a href="/Devoexz/MoiNeSam/">Главная</a>
-        <a href="/Devoexz/MoiNeSam/admin.php">Админ-панель</a>
-        <a href="/Devoexz/MoiNeSam/reg.php">Регистрация</a>
-        <a href="/Devoexz/MoiNeSam/order.php">Список-заявок</a>
-        <a href="/Devoexz/MoiNeSam/order-list.php">Создание заявки</a>
+        <?php foreach ($navLinks as $link): ?>
+            <a href="<?php echo htmlspecialchars($link['href']); ?>"><?php echo htmlspecialchars($link['text']); ?></a>
+        <?php endforeach; ?>
     </nav>
 
     <main>
-    <h1>  
-    <?php echo $pageTittle;?>
-</h1>
-        <div class= 'content'>
+        <h1><?php echo $pageTitle;?></h1>
+        <div class="content">
             <?php echo $pageContent ?? '';?>
-        </div>   
+        </div>
         <footer>
-    <h3>2025</h3>
-</footer>
+            <h3>2025</h3>
+        </footer>
     </main>
-    
-<script src="script/script.js"></script>
+
+
+    <script src="script/script.js"></script>
 </body>
 </html>
