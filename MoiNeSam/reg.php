@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (empty($phone)) $errors[] = "Телефон обязателен для заполнения";
     if (empty($email)) $errors[] = "Email обязателен для заполнения";
     if (!empty($login)) {
-        $check_login = mysqli_query($db, "SELECT id_user FROM user WHERE username = '$login'");
+        $check_login = mysqli_query($db, "SELECT id FROM user WHERE username = '$login'");
         if (mysqli_num_rows($check_login) > 0) {
             $errors[] = "Пользователь с таким логином уже существует";
         }
