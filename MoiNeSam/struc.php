@@ -11,15 +11,15 @@ if (isset($_SESSION['user'])) {
     // Check user type from the session data
     $userTypeId = $user['user_type_id'] ?? null;
     
-    if ($userTypeId == 2) { // Administrator
+    if ($userTypeId == 1) { // Administrator
         // Admin specific links
         $navLinks = [
             ['href' => 'admin.php', 'text' => 'Панель администратора'],
         ];
     } else { // Regular User
         $navLinks = [
-            ['href' => 'zayavka.php', 'text' => 'Список заявок'],
-            ['href' => 'create_zayavka.php', 'text' => 'Создать заявку'],
+            ['href' => 'order.php', 'text' => 'Список заявок'],
+            ['href' => 'order-list.php', 'text' => 'Создать заявку'],
         ];
     }
     // Add logout button for all logged-in users
@@ -28,7 +28,7 @@ if (isset($_SESSION['user'])) {
     // Links visible before authentication
     $navLinks = [
         ['href' => 'index.php', 'text' => 'Авторизация'],
-        ['href' => 'registration.php', 'text' => 'Регистрация'],
+        ['href' => 'reg.php', 'text' => 'Регистрация'],
     ];
 }
 ?>
@@ -37,24 +37,15 @@ if (isset($_SESSION['user'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Нарушениям Нет  <?php echo $pageTitle; ?></title>
+    <title>Мой не сам  <?php echo $pageTitle; ?></title>
     <link rel='icon' href='images/logo.jpeg'>
-    <link rel='stylesheet' href='css/style.css'>
+    <link rel='stylesheet' href='style/style.css'>
 </head>
 <body>
     <header>
         <img src='images/logo.jpeg' alt='логотип'>
-        <h1>Нарушениям Нет</h1>
+        <h1>Мой не сам</h1>
     </header>
-<!--
-    <nav>
-        <a href="index.php">Авторизация</a>
-        <a href="registration.php">Регистрация</a>
-        <a href="create_zayavka.php">Создать заявку</a>
-        <a href="zayavka.php">Список заявок</a>
-        <a href="admin.php">Панель администратора</a>
-    </nav>
--->
 
     <nav>
         <?php foreach ($navLinks as $link): ?>
@@ -73,6 +64,6 @@ if (isset($_SESSION['user'])) {
     </main>
 
 
-    <script src="js/script.js"></script>
+    <script src="script/script.js"></script>
 </body>
 </html>

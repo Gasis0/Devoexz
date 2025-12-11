@@ -1,16 +1,16 @@
 <?php
 $pageTitle = 'Авторизация';
-require_once "struktura.php";
+require_once "struc.php";
 $loginError = '';
 
 // Check if the user is already logged in and redirect them if necessary
 if (isset($_SESSION['user'])) {
     $user = $_SESSION['user'];
-    if ($user['user_type_id'] == 2) {
+    if ($user['user_type_id'] == 1) {
         header("Location: admin.php");
         exit();
     } else {
-        header("Location: zayavka.php");
+        header("Location: order-list.php");
         exit();
     }
 }
@@ -30,11 +30,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION['user'] = $user; // Store the entire user data array in session
 
         // Redirect based on user type
-        if ($user['user_type_id'] == 2) {
-            header("Location: admin.php");
+        if ($user['user_type_id'] == 1) {
+            header("Location:  admin.php");
             exit();
         } else {
-            header("Location: zayavka.php");
+            header("Location: order-list.php");
             exit();
         }
     } else {
@@ -45,30 +45,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 ?>
 
     <main>    
-       <!--
-        <form>
-        <label>Логин
-            <input type="text" name="login"> 
-        </label> 
-        <label>Пароль
-            <input type="text" name="password"> 
-        </label> 
-        <button>Вход</button>
-        </form> 
-        <p class="Error">
-            <?php    /*        
-            $password=strip_tags($_GET["password"] ?? "");
-            $login=strip_tags($_GET["login"] ?? "");            
-            if ($login && $password){                
-                echo find($login,$password);
-                if (find($login, $password)) {
-                    echo "Успешная авторизация: " . $login . ", " . $password;
-                } else {
-                    echo "Ошибка авторизации: " . $login . ", " . $password . " - error";
-                }
-            }*/
-            ?>
-        </p>-->
         <form method="post" action="index.php">
         <label>Логин
         <input type="text" name="login" required value="<?php echo htmlspecialchars($login ?? ''); ?>" autocomplete="username">
@@ -84,8 +60,3 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <p class="Error"><?php echo htmlspecialchars($loginError); ?></p>
     <?php endif; ?>
     </main>
-
-
-
-
-
